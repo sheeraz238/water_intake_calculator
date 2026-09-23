@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-//import 'package:water_intake/components/bottom_button.dart';
-//import 'package:water_intake/components/constants.dart';
-
 import 'package:water_intake/constants.dart';
 import 'package:water_intake/components/reusable_card.dart';
 import 'package:water_intake/components/bottom_button.dart';
-// import 'package:water_intake/screens/input_page.dart';
-// import 'package:water_intake/water_brain.dart';
 
 class ResultPage extends StatelessWidget {
   final String waterIntake;
@@ -70,8 +65,6 @@ class ResultPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: kTextStyle,
                     ),
-
-                    // Water level visual!
                   ],
                 ),
               ),
