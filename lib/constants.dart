@@ -14,6 +14,7 @@ const kResultTextStyle = TextStyle(
 );
 
 const kTextStyle = TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold);
+//Activity level Text
 const kAtivityLevelText = TextStyle(
   fontSize: 15.0,
   fontWeight: FontWeight.bold,
