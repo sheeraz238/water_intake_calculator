@@ -46,11 +46,11 @@ class WaterBrain {
 
   String getAdvice() {
     if (_waterIntake >= 3.0) {
-      return "You have a higher than normal body weight. Try to exercise more water.";
-    } else if (_waterIntake > 2.0) {
-      return "You have a normal WaterIntake, Good Job!";
+      return "Great job! You are well hydrated. Keep up the good work!";
+    } else if (_waterIntake >= 2.0) {
+      return "You have a normal water intake. Good job!";
     } else {
-      return "You have a lower than normal waterIntake, you can drink a bit more.";
+      return "Your water intake is lower than recommended. Try to drink a bit more water!";
     }
   }
 

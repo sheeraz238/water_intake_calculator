@@ -130,8 +130,11 @@ class _InputPageState extends State<InputPage> {
                         children: [
                           Text("ACTIVITY LEVEL", style: kTextStyle),
                           Text('$activityLevel', style: kNumberTextStyle),
-
-                          Text(water.getActivityLabel(), style: kTextStyle),
+                          Text(
+                            water.getActivityLabel(),
+                            style: kAtivityLevelText,
+                          ),
+                          const SizedBox(height: 9),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -151,7 +154,8 @@ class _InputPageState extends State<InputPage> {
                                   });
                                 },
                               ),
-                              SizedBox(width: 10),
+
+                              SizedBox(width: 20),
                               RoundIcon(
                                 icon: Icons.add,
                                 onPress: () {
@@ -181,7 +185,7 @@ class _InputPageState extends State<InputPage> {
                     onPress: () {},
                     colour: kActiveCardColor,
                     childCard: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text("AGE", style: kTextStyle),
                         Text(age.toString(), style: kNumberTextStyle),
@@ -198,7 +202,7 @@ class _InputPageState extends State<InputPage> {
                                 });
                               },
                             ),
-                            SizedBox(width: 10),
+                            SizedBox(width: 20),
                             RoundIcon(
                               icon: Icons.add,
                               onPress: () {
@@ -235,12 +239,17 @@ class _InputPageState extends State<InputPage> {
 
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => ResultPage(
-                    waterIntake: water.calculateWater(),
-                    status: water.getSatuts(),
-                    interpretation: water.getAdvice(),
-                  ),
+                PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      ResultPage(
+                        waterIntake: water.calculateWater(),
+                        status: water.getSatuts(),
+                        interpretation: water.getAdvice(),
+                      ),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                        return FadeTransition(opacity: animation, child: child);
+                      },
                 ),
               );
             },
