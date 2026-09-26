@@ -134,7 +134,7 @@ class _InputPageState extends State<InputPage> {
                             water.getActivityLabel(),
                             style: kAtivityLevelText,
                           ),
-                          const SizedBox(height: 9),
+                          const SizedBox(height: 3),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
