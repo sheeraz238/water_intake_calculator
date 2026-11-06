@@ -139,13 +139,13 @@ Make sure you have installed:
 Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/sheeraz238/water_intake_calculator.git
 ```
 
 Move into the project directory:
 
 ```bash
-cd YOUR_PROJECT_FOLDER
+cd water_intake_calculator
 ```
 
 Get the dependencies:
